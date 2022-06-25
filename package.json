@@ -4,7 +4,25 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
-    "start": "remix-serve build"
+    "start": "remix-serve build",
+    "account": "npm exec -c 'hardhat account' --workspace=hardhatt",
+    "accounts": "npm exec -c 'hardhat accounts' --workspace=hardhats",
+    "balance": "npm exec -c 'hardhat balance' --workspace=hardhate",
+    "chain": "npm exec -c 'hardhat node --network hardhat --no-deploy' --workspace=hardhat",
+    "clean": "npm exec -c 'hardhat clean'",
+    "compile": "npm exec -c 'hardhat compile' --workspace=hardhat",
+    "deploy": "npm exec -c 'hardhat deploy --export-all ../react-app/src/contracts/hardhat_contracts.json' --workspace=hardhat",
+    "flatten": "cd packages/hardhat && npx hardhat flatten",
+    "fork": "npm exec -c 'hardhat node --no-deploy --network hardhat --fork https://mainnet.infura.io/v3/460f40a260564ac4a4f4b3fffb032dad' --workspace=hardhat",
+    "fundedwallet": "cd packages/hardhat && npx hardhat fundedwallet",
+    "generate": "npm exec -c 'hardhat generate' --workspace=hardhate",
+    "mineContractAddress": "cd packages/hardhat && npx hardhat mineContractAddress",
+    "send": "npm exec -c 'hardhat send' --workspace=hardhat",
+    "test": "hardhat test --network hardhat' --workspace=hardha",
+    "verify": "npm exec -c 'hardhat verify' --workspace=hardhat",
+    "wallet": "cd packages/hardhat && npx hardhat wallet",
+    "watch": "node scripts/watch.j' --workspace=hardhat",
+    "postdeploy": "npm exec -c 'hardhat run scripts/publish.js' --workspace=hardhat"
   },
   "dependencies": {
     "@remix-run/node": "*",
@@ -23,5 +41,8 @@
   },
   "engines": {
     "node": ">=14"
-  }
+  },
+  "workspaces": [
+    "hardhat"
+  ]
 }

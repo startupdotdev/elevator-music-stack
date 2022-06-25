@@ -14,9 +14,12 @@ async function main({ rootDirectory }) {
   if (!fs.existsSync(HARDHAT_DIR)) {
     fs.mkdirSync(HARDHAT_DIR);
   }
-  process.chdir(HARDHAT_DIR);
-
   execSync(`npx hardhat`, { stdio: "inherit", cwd: HARDHAT_DIR });
+  execSync(`npm i hardhat`, { stdio: "inherit", cwd: HARDHAT_DIR });
+  execSync(
+    `npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers`,
+    { stdio: "inherit", cwd: HARDHAT_DIR }
+  );
 }
 
 module.exports = main;
