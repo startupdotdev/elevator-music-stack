@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import Header from "~/components/header";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -23,6 +24,7 @@ export default function App() {
         <script src="https://cdn.tailwindcss.com"></script>
       </head>
       <body>
+        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
