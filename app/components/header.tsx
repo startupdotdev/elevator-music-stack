@@ -1,4 +1,5 @@
 import { NavLink } from "@remix-run/react";
+import ConnectWallet from "./connect-wallet";
 
 const navLinks: {
   label: string;
@@ -43,7 +44,9 @@ export default function Header() {
               Remix.Run ++ Ethereum dev stack focused on fast product iteration.
             </div>
           </div>
-          <div>Account</div>
+          <div>
+            <ConnectWallet />
+          </div>
         </div>
       </div>
       <div className="contianer p-4 pb-0 border-b border-b-gray-200 flex -ml-4">
@@ -54,7 +57,7 @@ export default function Header() {
             style={{
               marginBottom: -1,
             }}
-            className={({ isActive }) =>
+            className={({ isActive }: { isActive: boolean }) =>
               isActive
                 ? "text-blue-300 border-b-2 border-b-blue-300 py-4 mx-3 block"
                 : "py-4 mx-3 block"

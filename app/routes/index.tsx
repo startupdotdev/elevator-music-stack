@@ -1,11 +1,18 @@
-import { ethers } from "ethers";
 import { Link } from "@remix-run/react";
-
-// TODO
-const purpose = null;
-const yourLocalBalance = 0;
+import { ethers } from "ethers";
+import { hooks as Web3Hooks } from "~/connectors/meta-mask";
+import { useWeb3Signer } from "~/hooks/useWeb3Signer";
 
 export default function Index() {
+  const purpose = null;
+  const balance = 0;
+
+  const chainId = Web3Hooks.useChainId();
+  let provider = Web3Hooks.useProvider();
+  const signer = useWeb3Signer(provider);
+
+  console.log(chainId);
+
   return (
     <div>
       <div className="my-8 mx-4">
@@ -39,7 +46,7 @@ export default function Index() {
         <span className="mr-2">🤖</span>
         An example prop of your balance{" "}
         <span style={{ fontWeight: "bold", color: "green" }}>
-          ({ethers.utils.formatEther(yourLocalBalance)})
+          ({ethers.utils.formatEther(balance)})
         </span>{" "}
         was passed into the
         <span className="font-bold">boop.tsx</span> component from

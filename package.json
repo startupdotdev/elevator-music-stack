@@ -29,6 +29,9 @@
     "@remix-run/node": "*",
     "@remix-run/react": "*",
     "@remix-run/serve": "*",
+    "@web3-react/core": "8.0.22-beta.0",
+    "@web3-react/metamask": "8.0.18-beta.0",
+    "@web3-react/types": "8.0.11-beta.0",
     "eth-hooks": "^4.3.1",
     "ethers": "^5.6.9",
     "react": "^17.0.2",
@@ -37,7 +40,7 @@
   "devDependencies": {
     "@remix-run/dev": "*",
     "@remix-run/eslint-config": "*",
-    "@types/react": "^17.0.45",
+    "@types/react": "^17.0.47",
     "@types/react-dom": "^17.0.17",
     "eslint": "^8.15.0",
     "prepend-file": "^2.0.1",
