@@ -46,7 +46,7 @@ export default function Header() {
           <div>Account</div>
         </div>
       </div>
-      <div className="contianer p-4 pb-0 border-b border-b-gray-200 flex justify-center">
+      <div className="contianer p-4 pb-0 border-b border-b-gray-200 flex -ml-4">
         {navLinks.map(({ label, href }) => (
           <NavLink
             key={href}
