@@ -8,6 +8,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import Header from "~/components/header";
+import { EthersAppContext } from "eth-hooks/context";
+import { DappContext } from "./contexts/dapp-context";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -25,7 +27,12 @@ export default function App() {
       </head>
       <body>
         <Header />
-        <Outlet />
+
+        <EthersAppContext>
+          <DappContext.Provider value={{}}>
+            <Outlet />
+          </DappContext.Provider>
+        </EthersAppContext>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
