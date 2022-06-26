@@ -8,9 +8,9 @@
 npx create-remix@latest --template startupdotdev/vapor-wave-stack
 ```
 
-Please remove tailwind from CDN before production! Chere here for how to install tailwind correctly, or feel free to remove and install your CSS solution of choice.
+Please remove tailwind from CDN before production! [Check here](https://tailwindcss.com/docs/installation) for how to install tailwind correctly, or feel free to remove and install your CSS solution of choice.
 
-Oppinionated examples of:
+Opinionated examples of:
 
 - tools for interacting with Ethereum (ethers.js, web3modal, more)
 
@@ -20,7 +20,7 @@ Oppinionated examples of:
 
 - as essentialist collection of components (e.g. wallet-connect)
 
-All code is authored to be easy to follow, not perfectly abstracted. This allows folks that use this library to feel the weight and motion of how the unterlying technology functions.
+All code is authored to be easy to follow, not perfectly abstracted. This allows folks that use this library to feel the weight and motion of how the underlying technology functions.
 
 ## App Lifecycle
 
@@ -105,7 +105,7 @@ cp -R ../my-old-remix-app/app app
 
 > A Provider is an abstraction of a connection to the Ethereum network, providing a concise, consistent interface to standard Ethereum node functionality. [https://docs.ethers.io/v5/api/providers/](https://docs.ethers.io/v5/api/providers/)
 
-Web3 proiders are responsible for quering blockchain nodes [ref](https://blog.quicknode.com/the-importance-of-web3-provider-redundancy/). Use multiple providers for additional redundancy.
+Web3 providers are responsible for querying blockchain nodes [ref](https://blog.quicknode.com/the-importance-of-web3-provider-redundancy/). Use multiple providers for additional redundancy.
 
 Most common client-side provider libraries support connecting to multiple back-end providers for redundancy.
 
@@ -129,7 +129,7 @@ See free RPC nodes [here](https://ethereumnodes.com/)
 
 - What is ethers.js or web3.js?
 
-Both are a collectino of utilities to interact with wEb3. [web3.js](https://web3js.readthedocs.io/en/v1.7.4/#web3-js-ethereum-javascript-api) / [https://docs.ethers.io/v5/](https://docs.ethers.io/v5/)
+Both are a collection of utilities to interact with wEb3. [web3.js](https://web3js.readthedocs.io/en/v1.7.4/#web3-js-ethereum-javascript-api) / [https://docs.ethers.io/v5/](https://docs.ethers.io/v5/)
 
 - What is a _node_?
 
