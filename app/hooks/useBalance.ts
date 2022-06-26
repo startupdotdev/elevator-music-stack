@@ -1,8 +1,6 @@
-import { BigNumber, ethers, Signer } from "ethers";
+import { ethers, Signer } from "ethers";
 import { useState, useEffect } from "react";
-import { hooks as Web3Hooks } from "~/connectors/meta-mask";
-// import { useInterval } from "./use-interval";
-import { useWeb3Signer } from "./useWeb3Signer";
+import { DappContextType } from "./useDappContext";
 
 async function getBalance({
   signer,
@@ -16,13 +14,12 @@ async function getBalance({
   return parseFloat(ethers.utils.formatUnits(bnBalance, 18));
 }
 
-export function useBalance() {
-  let provider = Web3Hooks.useProvider();
-  let signer = useWeb3Signer(provider);
-
+export function useBalance(dappContext: DappContextType) {
   let [balance, setBalance] = useState<number>(0);
+  let { signer, provider } = dappContext;
 
   useEffect(() => {
+    console.log(signer, provider);
     if (!signer || !provider) {
       return;
     }

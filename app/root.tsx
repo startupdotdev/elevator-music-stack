@@ -29,6 +29,7 @@ export default function App() {
       </head>
       <body>
         <Header />
+        {/* How do we connect  */}
         {dappContextData && (
           <DappContext.Provider value={dappContextData}>
             <Outlet />
