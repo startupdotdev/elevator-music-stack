@@ -21,7 +21,6 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   let dappContextData = useDappContext();
-  console.log(dappContextData);
   return (
     <html lang="en">
       <head>
