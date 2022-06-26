@@ -1,8 +1,6 @@
 import { Web3ReactHooks } from "@web3-react/core";
-import { BigNumber, ethers, Signer } from "ethers";
 import { useState, useEffect } from "react";
 import { hooks as web3Hooks } from "~/connectors/meta-mask";
-import { useBalance } from "./useBalance";
 import { useDappData } from "./useDappData";
 // import { useInterval } from "./use-interval";
 import { useWeb3Signer } from "./useWeb3Signer";
@@ -15,6 +13,20 @@ export interface DappContextType {
   dappData: any; // TODO: define structure here
 }
 
+/**
+ * Think of this as your web3 garage.
+ *
+ * - signer / provider available at top level
+ *
+ * - dappData as a collection of all global dapp data
+ *
+ * - Reloading logic for if things change on chain or if user
+ *    changes account / network / etc (wip)
+ *
+ * - Access to hooks from https://github.com/NoahZinsmeister/web3-react
+ *
+ * @returns
+ */
 export function useDappContext() {
   let [currentTransaction, updateTransaction] = useState<string | null>(null);
   const chainId = web3Hooks.useChainId();
@@ -36,11 +48,9 @@ export function useDappContext() {
   //   let pollingKey = useInterval(10_000);
 
   useEffect(() => {
-    console.log("useDappContext", signer, provider);
     if (!signer || !chainId || !provider) {
       return;
     }
-    console.log("set it");
 
     setDappContext({
       signer,

@@ -22,6 +22,21 @@ Oppinionated examples of:
 
 All code is authored to be easy to follow, not perfectly abstracted. This allows folks that use this library to feel the weight and motion of how the unterlying technology functions.
 
+## App Lifecycle
+
+Before connection
+Connecting
+After connection
+Errors
+
+## `DappContext`
+
+## `DappData`
+
+## `DC/<Components>`
+
+### `DC/connect-wallet`
+
 ## Interacting with Ethereum
 
 - Local RPC (w/hardhat)

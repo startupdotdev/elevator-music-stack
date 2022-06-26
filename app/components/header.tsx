@@ -1,5 +1,5 @@
 import { NavLink } from "@remix-run/react";
-import ConnectWallet from "./connect-wallet";
+import ConnectWallet from "../dc/connect-wallet";
 
 const navLinks: {
   label: string;
