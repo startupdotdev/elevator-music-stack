@@ -33,9 +33,9 @@ export default function Index() {
         <div className="my-8 mx-4">
           <span className="mr-2">👷‍♀️</span>
           You haven't deployed your contract yet, run
-          <span className="font-bold">npm run chain</span> and{" "}
-          <span className="font-bold">npm run deploy</span> to deploy your first
-          contract!
+          <span className="font-bold"> npm run chain</span> and{" "}
+          <span className="font-bold"> npm run deploy</span> to deploy your
+          first contract!
         </div>
       ) : (
         <div className="my-8 mx-4">
@@ -51,9 +51,6 @@ export default function Index() {
         <span style={{ fontWeight: "bold", color: "green" }}>
           ({balance})
         </span>{" "}
-        was passed into the
-        <span className="font-bold">boop.tsx</span> component from
-        <span className="font-bold">index.tsx</span>
       </div>
       <div className="my-8 mx-4">
         <span className="mr-2">💭</span>
