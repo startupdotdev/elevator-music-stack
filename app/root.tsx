@@ -11,6 +11,7 @@ import Header from "~/components/header";
 import SendEth from "~/components/send-eth";
 import { DappContext } from "./contexts/dapp-context";
 import { useDappContext } from "./hooks/useDappContext";
+import ConnectWeb3Modal from "~/dc/connect-web3-modal";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -28,6 +29,7 @@ export default function App() {
         <script src="https://cdn.tailwindcss.com"></script>
       </head>
       <body>
+        <ConnectWeb3Modal />
         <Header />
         {/* How do we connect  */}
         {dappContextData && (
@@ -37,6 +39,7 @@ export default function App() {
           </DappContext.Provider>
         )}
         <ScrollRestoration />
+        <script src="web3modal.js" />
         <Scripts />
         <LiveReload />
       </body>
