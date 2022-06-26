@@ -52,8 +52,10 @@ export function useDappContext() {
   }, [
     signer,
     provider,
+    web3Hooks,
+    updateTransaction,
     // pollingKey,
-    chainId,
+    chainId, // Rerun if chain updates
     currentTransaction,
   ]);
 

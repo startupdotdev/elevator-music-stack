@@ -14,26 +14,18 @@ function getDefaultDappData() {
 
 export function useDappData(dappContext: DappContextType): DappDataType {
   let [dappData, setDappData] = useState<DappDataType>(getDefaultDappData());
-  // let balance = useBalance();
-
-  const { web3Hooks } = dappContext;
-  const provider = web3Hooks.useProvider();
-  // const chainId = web3Hooks?.useChainId();
+  let balance = useBalance(dappContext);
 
   useEffect(() => {
-    // TODO: Can we guarantee these by now?
-    // if (!signer || !chainId || !provider) {
-    //   return;
-    // }
     /**
      * Can we provide a set of hooks from here that
      * are appropriately connected to provider / signer?
      *
      * */
-    // setDappData({
-    //   balance,
-    // });
-  }, []);
+    setDappData({
+      balance,
+    });
+  }, [balance]);
 
   return dappData;
 }
