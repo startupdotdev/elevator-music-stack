@@ -10,6 +10,7 @@ import {
 import Header from "~/components/header";
 import { EthersAppContext } from "eth-hooks/context";
 import { DappContext } from "./contexts/dapp-context";
+import { useDappContext } from "./hooks/useDappContext";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -18,6 +19,8 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function App() {
+  let dappContextData = useDappContext();
+  console.log(dappContextData);
   return (
     <html lang="en">
       <head>
@@ -26,12 +29,13 @@ export default function App() {
         <script src="https://cdn.tailwindcss.com"></script>
       </head>
       <body>
-        <Header />
-
         <EthersAppContext>
-          <DappContext.Provider value={{}}>
-            <Outlet />
-          </DappContext.Provider>
+          <Header />
+          {dappContextData && (
+            <DappContext.Provider value={dappContextData}>
+              <Outlet />
+            </DappContext.Provider>
+          )}
         </EthersAppContext>
         <ScrollRestoration />
         <Scripts />

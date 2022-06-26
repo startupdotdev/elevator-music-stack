@@ -2,16 +2,19 @@ import { Link } from "@remix-run/react";
 import { ethers } from "ethers";
 import { hooks as Web3Hooks } from "~/connectors/meta-mask";
 import { useWeb3Signer } from "~/hooks/useWeb3Signer";
+import { useContext } from "react";
+import { DappContext } from "~/contexts/dapp-context";
+import { DappContextType } from "~/hooks/useDappContext";
 
 export default function Index() {
   const purpose = null;
-  const balance = 0;
 
   const chainId = Web3Hooks.useChainId();
   let provider = Web3Hooks.useProvider();
   const signer = useWeb3Signer(provider);
 
-  console.log(chainId);
+  let { balance } = useContext<DappContextType>(DappContext);
+  console.log(balance);
 
   return (
     <div>

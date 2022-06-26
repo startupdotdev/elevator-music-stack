@@ -36,21 +36,23 @@ export default function ConnectWallet() {
           Install MetaMask to get started
         </a>
       )}
-      {typeof window !== "undefined" && window.ethereum && !isActive && (
-        <div className="text-sm">
-          <button
-            data-testid="connect-wallet"
-            style={{
-              background: "linear-gradient(270deg, #1BD6CF 0%, #00E5AF 100%)",
-            }}
-            className="bg-brand-green text-gray-900 py-4 px-4 rounded-md text-sm"
-            onClick={isActivating ? undefined : () => metaMask.activate()}
-            disabled={isActivating}
-          >
-            Connect Wallet
-          </button>
-        </div>
-      )}
+      {typeof window !== "undefined" &&
+        typeof window.ethereum !== "undefined" &&
+        !isActive && (
+          <div className="text-sm">
+            <button
+              data-testid="connect-wallet"
+              style={{
+                background: "linear-gradient(270deg, #1BD6CF 0%, #00E5AF 100%)",
+              }}
+              className="bg-brand-green text-gray-900 py-4 px-4 rounded-md text-sm"
+              onClick={isActivating ? undefined : () => metaMask.activate()}
+              disabled={isActivating}
+            >
+              Connect Wallet
+            </button>
+          </div>
+        )}
       {error?.message && (
         <div className="text-xs text-gray-500">{error.message}</div>
       )}
