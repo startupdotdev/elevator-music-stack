@@ -8,6 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import Header from "~/components/header";
+import SendEth from "~/components/send-eth";
 import { EthersAppContext } from "eth-hooks/context";
 import { DappContext } from "./contexts/dapp-context";
 import { useDappContext } from "./hooks/useDappContext";
@@ -34,6 +35,7 @@ export default function App() {
           {dappContextData && (
             <DappContext.Provider value={dappContextData}>
               <Outlet />
+              <SendEth />
             </DappContext.Provider>
           )}
         </EthersAppContext>
