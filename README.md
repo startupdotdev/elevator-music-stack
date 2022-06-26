@@ -1,10 +1,14 @@
+![./public/vaporwave.jpg](./public/vaporwave.jpg)
+
 # Remix >> Vapor Wave Stack
 
 ```bash
 npx create-remix@latest --template startupdotdev/vapor-wave-stack
 ```
 
-# Remix 
+Please remove tailwind from CDN before production! Chere here for how to install tailwind correctly, or feel free to remove and install your CSS solution of choice.
+
+# Remix
 
 - [Remix Docs](https://remix.run/docs)
 
@@ -57,3 +61,9 @@ rm -rf app
 # copy your app over
 cp -R ../my-old-remix-app/app app
 ```
+
+---
+
+TODO:
+
+need to get `/hardhat/scripts/publish
