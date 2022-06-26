@@ -1,4 +1,10 @@
-# Welcome to Remix!
+# Remix >> Vapor Wave Stack
+
+```bash
+npx create-remix@latest --template startupdotdev/vapor-wave-stack
+```
+
+# Remix 
 
 - [Remix Docs](https://remix.run/docs)
 
