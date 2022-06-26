@@ -49,7 +49,7 @@ export default function Index() {
         <span className="mr-2">🤖</span>
         An example prop of your balance{" "}
         <span style={{ fontWeight: "bold", color: "green" }}>
-          ({ethers.utils.formatEther(balance)})
+          ({balance})
         </span>{" "}
         was passed into the
         <span className="font-bold">boop.tsx</span> component from

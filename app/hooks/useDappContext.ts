@@ -33,6 +33,7 @@ export function useDappContext() {
     });
   }, [
     signer,
+    provider,
     // pollingKey,
     chainId,
     currentTransaction,

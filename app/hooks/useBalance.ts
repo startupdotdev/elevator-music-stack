@@ -13,7 +13,6 @@ async function getBalance({
 }): Promise<number> {
   let address = await signer.getAddress();
   let bnBalance = await provider.getBalance(address);
-  console.log(parseFloat(ethers.utils.formatUnits(bnBalance, 18)));
   return parseFloat(ethers.utils.formatUnits(bnBalance, 18));
 }
 
